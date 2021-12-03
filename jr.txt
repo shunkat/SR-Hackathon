@@ -20,3 +20,7 @@ files = {
 print(type(files))
 # r = requests.post("http://127.0.0.1:5000",json=json.dumps(files))  # jsonとしてサーバーにPOSTする
 # print(r.json())
+
+
+
+https://azure-hack-nakajima-function.azurewebsites.net/api/register_emotions?code=BounktwVJSaOPg4MLaYWQcCuaOO9boPRq2a90sj06YFZUlMG4mUYww==

@@ -1,0 +1,22 @@
+img = Image.open('images/test-image/test-image4.jpg')
+print('画像の型:{}'.format(type(img)))
+# PillowImageをbytesに変換してさらにbase64に変換
+buffered = io.BytesIO()
+img.save(buffered, format="JPEG")
+img_byte = buffered.getvalue()  # bytes
+print('buffred画像の型:{}'.format(type(img_byte)))
+
+img_base64 = base64.b64encode(img_byte)  # base64でエンコードされたbytes ※strではない
+print('base64Encode画像の型:{}'.format(type(img_base64)))
+
+# まだbytesなのでjson.dumpsするためにstrに変換(jsonの要素はbytes型に対応していないため)
+img_str = img_base64.decode('utf-8')  # str
+print('decodeされた画像の型:{}'.format(type(img_str)))
+
+files = {
+    "image": img_str,
+    "person_group": "social-residence",
+}
+print(type(files))
+# r = requests.post("http://127.0.0.1:5000",json=json.dumps(files))  # jsonとしてサーバーにPOSTする
+# print(r.json())

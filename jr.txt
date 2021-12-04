@@ -24,3 +24,5 @@ print(type(files))
 
 
 https://azure-hack-nakajima-function.azurewebsites.net/api/register_emotions?code=BounktwVJSaOPg4MLaYWQcCuaOO9boPRq2a90sj06YFZUlMG4mUYww==
+
+https://azure-hackathon-api-functions.azurewebsites.net/api/auth
